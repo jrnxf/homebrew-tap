@@ -5,7 +5,7 @@ class Okfs < Formula
   head "https://github.com/jrnxf/okfs.git", branch: "main"
 
   # build.rs builds the page in ui/ with bun before cargo embeds it
-  depends_on "bun" => :build
+  depends_on "oven-sh/bun/bun" => :build
   depends_on "rust" => :build
 
   def install
