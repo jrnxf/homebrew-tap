@@ -9,6 +9,7 @@ brew install jrnxf/tap/thokr
 ## Formulas
 
 - `thokr`: sleek typing tui with visualized results and historical logging
+- `drip`: HUD from the shell for macOS. No release yet, so install its latest `main` with `brew install --HEAD jrnxf/tap/drip` and update it with `brew upgrade --fetch-HEAD drip`.
 
 ## Adding a formula
 
