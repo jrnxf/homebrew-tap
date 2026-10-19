@@ -12,20 +12,31 @@ jobs:
       - uses: actions/checkout@v4
       - name: tap this checkout
         run: brew tap jrnxf/tap "$GITHUB_WORKSPACE"
+      - name: list formulae
+        # A head-only formula (no url yet, like drip before its first release) builds a private
+        # repository's main, which CI cannot clone, so only formulae with a release are built.
+        run: |
+          names=""
+          for f in Formula/*.rb; do
+            if grep -q '^  url "' "$f"; then
+              names="$names $(basename "$f" .rb)"
+            fi
+          done
+          echo "FORMULAE=$names" >> "$GITHUB_ENV"
       - name: install
         run: |
-          for f in Formula/*.rb; do
-            brew install --build-from-source "jrnxf/tap/$(basename "$f" .rb)"
+          for f in $FORMULAE; do
+            brew install --build-from-source "jrnxf/tap/$f"
           done
       - name: test
         run: |
-          for f in Formula/*.rb; do
-            brew test "jrnxf/tap/$(basename "$f" .rb)"
+          for f in $FORMULAE; do
+            brew test "jrnxf/tap/$f"
           done
       - name: audit
         run: |
-          for f in Formula/*.rb; do
-            brew audit --strict --skip-style "jrnxf/tap/$(basename "$f" .rb)"
+          for f in $FORMULAE; do
+            brew audit --strict --skip-style "jrnxf/tap/$f"
           done
       - name: style
         # the lowercase description is the owner's choice, so skip only the FormulaAudit/Desc cop

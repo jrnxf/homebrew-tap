@@ -41,9 +41,17 @@ else
   sha="$(shasum -a 256 "$tmp" | cut -d ' ' -f 1)"
 fi
 
-sed -e "s|^  url \".*\"|  url \"${url}\"|" \
-    -e "s|^  sha256 \".*\"|  sha256 \"${sha}\"|" \
-    "$formula" > "$tmp.new"
+# A head-only formula has no url or sha256 yet: its first release adds them after the homepage.
+if grep -q '^  url "' "$formula"; then
+  sed -e "s|^  url \".*\"|  url \"${url}\"|" \
+      -e "s|^  sha256 \".*\"|  sha256 \"${sha}\"|" \
+      "$formula" > "$tmp.new"
+else
+  sed -e "/^  homepage \"/a\\
+  url \"${url}\"\\
+  sha256 \"${sha}\"" \
+      "$formula" > "$tmp.new"
+fi
 cat "$tmp.new" > "$formula"
 
 echo "Formula/${name}.rb -> v${version} (${sha})"
