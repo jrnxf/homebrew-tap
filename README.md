@@ -10,6 +10,7 @@ brew install jrnxf/tap/thokr
 
 - `thokr`: sleek typing tui with visualized results and historical logging
 - `drip`: HUD from the shell for macOS. No release yet, so install its latest `main` with `brew install --HEAD jrnxf/tap/drip` and update it with `brew upgrade --fetch-HEAD drip`.
+- `okfs`: web file browser. No release yet, so install its latest `main` with `brew install --HEAD jrnxf/tap/okfs` and update it with `brew reinstall okfs`.
 
 ## Adding a formula
 
