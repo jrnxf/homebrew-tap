@@ -9,7 +9,7 @@ brew install jrnxf/tap/thokr
 ## Formulas
 
 - `thokr`: sleek typing tui with visualized results and historical logging
-- `drip`: HUD from the shell for macOS. No release yet, so install its latest `main` with `brew install --HEAD jrnxf/tap/drip` and update it with `brew upgrade --fetch-HEAD drip`. From v0.1.0, `brew install jrnxf/tap/drip` downloads its prebuilt universal binary, for Apple silicon and Intel, with nothing to compile.
+- `drip`: HUD from the shell for macOS. No release yet, so install its latest `main` with `brew install --HEAD jrnxf/tap/drip` and update it with `brew reinstall drip`. From v0.1.0, `brew install jrnxf/tap/drip` downloads its prebuilt universal binary, for Apple silicon and Intel, with nothing to compile.
 - `okfs`: web file browser. No release yet, so install its latest `main` with `brew install --HEAD jrnxf/tap/okfs` and update it with `brew reinstall okfs`. From v0.1.0, `brew install jrnxf/tap/okfs` downloads its prebuilt binary for macOS or Linux, on ARM or x86-64, with its shell completions and man page, and nothing to compile.
 
 ## Adding a formula
