@@ -76,7 +76,7 @@ The workflow must run on the `release` event, for example `on: release: types: [
 
 `scripts/bump-formula.sh <formula> <version>` downloads the source archive of the release tag, then rewrites the `url` and `sha256` lines of `Formula/<formula>.rb`. A leading `v` on the version is accepted. It reads the repository address from the formula's `homepage`, so the homepage must be a `https://github.com/<owner>/<repo>` address.
 
-For a project that attaches prebuilt binaries to its release, add a `<platform>=<asset>` argument for each binary, for example `scripts/bump-formula.sh <formula> "${{ github.event.release.tag_name }}" macos=<formula>-universal-apple-darwin`. The job's `needs` must then include the job that uploads the binaries. The [README](../README.md#updating-a-formula) lists the platforms and what the script writes.
+For a project that attaches prebuilt binaries to its release, add a `<platform>=<asset>` argument for each binary, for example `scripts/bump-formula.sh <formula> "${{ github.event.release.tag_name }}" macos=<formula>-<version>-universal-apple-darwin.tar.gz`. The job's `needs` must then include the job that uploads the binaries. The [README](../README.md#updating-a-formula) lists the platforms and what the script writes.
 
 ## Removing a key
 

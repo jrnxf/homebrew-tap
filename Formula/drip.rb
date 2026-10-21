@@ -11,10 +11,8 @@ class Drip < Formula
       system "swift", "build", "--disable-sandbox", "-c", "release"
       bin.install ".build/release/drip"
     else
-      # A release is one universal binary, for Apple silicon and Intel. It downloads without its
-      # executable bit, which brew would not add.
-      chmod 0755, "drip-universal-apple-darwin"
-      bin.install "drip-universal-apple-darwin" => "drip"
+      # A release is one archive holding a universal binary, for Apple silicon and Intel.
+      bin.install "drip"
     end
   end
 

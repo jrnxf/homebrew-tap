@@ -2,7 +2,7 @@
 # Point a formula at a release: its source archive, or its prebuilt binary assets.
 # usage: scripts/bump-formula.sh <formula> <version> [<platform>=<asset> ...]
 #   source archive:  scripts/bump-formula.sh thokr 0.7.0   (or v0.7.0)
-#   binary assets:   scripts/bump-formula.sh okfs v0.1.0 macos-arm=okfs-aarch64-apple-darwin ...
+#   binary assets:   scripts/bump-formula.sh okfs v0.1.0 macos-arm=okfs-0.1.0-aarch64-apple-darwin.tar.gz ...
 # A platform is macos, linux, macos-arm, macos-intel, linux-arm or linux-intel; macos and linux
 # stand for both of their architectures. The release address is read from the formula's homepage,
 # so it works for any formula whose project is a GitHub repository.
