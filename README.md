@@ -9,8 +9,8 @@ brew install jrnxf/tap/thokr
 ## Formulas
 
 - `thokr`: sleek typing tui with visualized results and historical logging
-- `drip`: HUD from the shell for macOS. No release yet, so install its latest `main` with `brew install --HEAD jrnxf/tap/drip` and update it with `brew upgrade --fetch-HEAD drip`.
-- `okfs`: web file browser. No release yet, so install its latest `main` with `brew install --HEAD jrnxf/tap/okfs` and update it with `brew reinstall okfs`.
+- `drip`: HUD from the shell for macOS. No release yet, so install its latest `main` with `brew install --HEAD jrnxf/tap/drip` and update it with `brew upgrade --fetch-HEAD drip`. From v0.1.0, `brew install jrnxf/tap/drip` downloads its prebuilt universal binary, for Apple silicon and Intel, with nothing to compile.
+- `okfs`: web file browser. No release yet, so install its latest `main` with `brew install --HEAD jrnxf/tap/okfs` and update it with `brew reinstall okfs`. From v0.1.0, `brew install jrnxf/tap/okfs` downloads its prebuilt binary for macOS or Linux, on ARM or x86-64, with its shell completions and man page, and nothing to compile.
 
 ## Adding a formula
 
@@ -69,5 +69,5 @@ Every run replaces what the last run wrote, in either mode: the top-level `url` 
 A formula that uses the binary mode needs a few things the script does not write:
 
 - Homebrew allows one `on_macos` and one `on_linux` block per formula, so the formula cannot have its own block for a system the script writes one for. The script stops with an error instead.
-- `def install` installs the downloaded file. A plain binary keeps its asset name, so `bin.install Dir["okfs-*"].first => "okfs"` works for every platform.
+- `def install` installs the downloaded file. A plain binary keeps its asset name, so `bin.install File.basename(stable.url) => "okfs"` works for every platform. It downloads without its executable bit and brew does not add one, so `chmod 0755` it first.
 - If the formula keeps `head` to build from source, its build dependencies go in a `head do` block with the `url` of the repository, so a binary install does not pull them in. `def install` then checks `build.head?` to choose between building and installing the binary.
