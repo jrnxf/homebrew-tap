@@ -14,6 +14,9 @@ class Drip < Formula
       # A release is one archive holding a universal binary, for Apple silicon and Intel.
       bin.install "drip"
     end
+    # The notices for what drip bundles, which must ship with every copy. brew keeps LICENSE and
+    # README.md on its own, but not this.
+    prefix.install "THIRD_PARTY.md"
   end
 
   def caveats
