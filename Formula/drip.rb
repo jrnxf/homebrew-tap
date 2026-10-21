@@ -7,8 +7,23 @@ class Drip < Formula
   depends_on macos: :ventura
 
   def install
-    system "swift", "build", "--disable-sandbox", "-c", "release"
-    bin.install ".build/release/drip"
+    if build.head?
+      system "swift", "build", "--disable-sandbox", "-c", "release"
+      bin.install ".build/release/drip"
+    else
+      # A release is one archive holding a universal binary, for Apple silicon and Intel.
+      bin.install "drip"
+    end
+    # The notices for what drip bundles, which must ship with every copy. brew keeps LICENSE and
+    # README.md on its own, but not this.
+    prefix.install "THIRD_PARTY.md"
+  end
+
+  def caveats
+    <<~EOS
+      Run `drip demo` to watch a few cards drop from the notch.
+      Run `drip setup claude` (or codex, or gemini) to get a card when an agent needs you.
+    EOS
   end
 
   test do

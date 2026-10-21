@@ -13,13 +13,15 @@ jobs:
       - name: tap this checkout
         run: brew tap jrnxf/tap "$GITHUB_WORKSPACE"
       - name: list formulae
-        # A head-only formula (no url yet, like drip before its first release) builds a private
+        # A head-only formula (no release yet, like drip before v0.1.0) builds a private
         # repository's main, which CI cannot clone, so only formulae with a release are built.
+        # brew reads the stable version itself, so a url inside on_macos or on_linux counts too.
         run: |
           names=""
           for f in Formula/*.rb; do
-            if grep -q '^  url "' "$f"; then
-              names="$names $(basename "$f" .rb)"
+            name="$(basename "$f" .rb)"
+            if [ "$(brew info --json=v2 "jrnxf/tap/$name" | jq -r '.formulae[0].versions.stable')" != null ]; then
+              names="$names $name"
             fi
           done
           echo "FORMULAE=$names" >> "$GITHUB_ENV"
