@@ -21,7 +21,7 @@ class Drip < Formula
 
   def caveats
     <<~EOS
-      Run `drip demo` to watch a few cards drop from the notch.
+      Run `drip ok "hello"` to see a card drop from the notch.
       Run `drip setup claude` (or codex, or gemini) to get a card when an agent needs you.
     EOS
   end
