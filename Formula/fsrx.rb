@@ -10,23 +10,23 @@ class Fsrx < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/jrnxf/fsrx/releases/download/v1.0.3/fsrx-1.0.3-aarch64-apple-darwin.tar.gz"
-      sha256 "f07b75137432c65d351ec5ded5424c34f291ca49690187667e59dc012e3381cd"
+      url "https://github.com/jrnxf/fsrx/releases/download/v1.1.0/fsrx-1.1.0-aarch64-apple-darwin.tar.gz"
+      sha256 "c533536c04b75c5107edea89679d1921f5859ef4963939663e0dc7f0a928314b"
     end
     on_intel do
-      url "https://github.com/jrnxf/fsrx/releases/download/v1.0.3/fsrx-1.0.3-x86_64-apple-darwin.tar.gz"
-      sha256 "2fd6f55755930e40d819c925152891c55fc48cdb09530f5106935fce2413cc12"
+      url "https://github.com/jrnxf/fsrx/releases/download/v1.1.0/fsrx-1.1.0-x86_64-apple-darwin.tar.gz"
+      sha256 "869c3d9f0d19aee9b3923d6c6f6a06fa6c08b2d0250a3c0d159efa694e865152"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/jrnxf/fsrx/releases/download/v1.0.3/fsrx-1.0.3-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "99307e6855c5e6bb14a485a4cb2f0f42bab7a960431b95763e0d540882106184"
+      url "https://github.com/jrnxf/fsrx/releases/download/v1.1.0/fsrx-1.1.0-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "e65d6c2ec3025b14b4927fde6188b0fb937362ce30d1820703079b7d38edaed7"
     end
     on_intel do
-      url "https://github.com/jrnxf/fsrx/releases/download/v1.0.3/fsrx-1.0.3-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "41500a8526b066e8b384ee4b52d55dbe17ff8168b88deec59c69c13f72bb602c"
+      url "https://github.com/jrnxf/fsrx/releases/download/v1.1.0/fsrx-1.1.0-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "a92450561b03b32120babc71f7e9216da66bf4ad0e5b4bf3656a96399f3227a0"
     end
   end
 
