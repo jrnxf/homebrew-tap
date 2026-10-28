@@ -1,6 +1,8 @@
 class Vxr < Formula
   desc "Fast voxel scene editor for macOS, with an MCP server for coding agents"
   homepage "https://github.com/jrnxf/vxr"
+  url "https://github.com/jrnxf/vxr/releases/download/v0.1.0-pre.1/vxr-0.1.0-pre.1-universal-apple-darwin.tar.gz"
+  sha256 "cac542b9220ee3150b32d8c9910ebfc33e920a9a2628d034cb5effe9455aee1f"
 
   head do
     url "https://github.com/jrnxf/vxr.git", branch: "main"
