@@ -1,8 +1,8 @@
 class Drip < Formula
   desc "HUD from the shell for macOS: a brief native card from the notch"
   homepage "https://github.com/jrnxf/drip"
-  url "https://github.com/jrnxf/drip/releases/download/v0.1.0-pre.27/drip-0.1.0-pre.27-universal-apple-darwin.tar.gz"
-  sha256 "be76ef82941057aca2a853a07090eb07e55166632656c92ee68fbaa16fba1937"
+  url "https://github.com/jrnxf/drip/releases/download/v0.1.0-pre.28/drip-0.1.0-pre.28-universal-apple-darwin.tar.gz"
+  sha256 "ad0f047144df9e02dd64c35a5ddd5f41a4cf7b2892b08625a16ce6341bc65002"
   license "MIT"
   head "https://github.com/jrnxf/drip.git", branch: "main"
 
