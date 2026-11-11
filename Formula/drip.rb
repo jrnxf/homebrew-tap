@@ -15,6 +15,8 @@ class Drip < Formula
     else
       # A release is one archive holding a universal binary, for Apple silicon and Intel.
       bin.install "drip"
+      # The man page, once the archive holds one: releases before it do not.
+      man1.install "drip.1" if File.exist?("drip.1")
     end
     # The notices for what drip bundles, which must ship with every copy. brew keeps LICENSE and
     # README.md on its own, but not this.
