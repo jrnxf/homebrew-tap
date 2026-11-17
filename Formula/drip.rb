@@ -1,5 +1,5 @@
 class Drip < Formula
-  desc "HUD from the shell for macOS: a brief native card from the notch"
+  desc "macOS CLI that shows scriptable notification cards from the MacBook notch"
   homepage "https://github.com/jrnxf/drip"
   url "https://github.com/jrnxf/drip/releases/download/v0.1.0-pre.33/drip-0.1.0-pre.33-universal-apple-darwin.tar.gz"
   sha256 "771fed409f45884560a37d8a936fad2efffa4a6d1397e000c4eeeff9f556f2af"
@@ -25,8 +25,11 @@ class Drip < Formula
 
   def caveats
     <<~EOS
-      Run `drip ok "hello"` to see a card drop from the notch.
-      Run `drip setup claude` (or codex, or gemini) to get a card when an agent needs you.
+      Run `drip ok "hello"` to see your first card.
+
+      When a coding agent needs you, a card comes from the notch.
+      For Claude Code, Codex or Gemini CLI, add the permission-cards recipe:
+        https://github.com/jrnxf/drip/blob/main/recipes/permission-cards/README.md
     EOS
   end
 
