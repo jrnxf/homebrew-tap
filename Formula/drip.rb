@@ -27,8 +27,11 @@ class Drip < Formula
 
   def caveats
     <<~EOS
-      Run `drip ok "hello"` to see a card drop from the notch.
-      Run `drip setup claude` (or codex, or gemini) to get a card when an agent needs you.
+      Run `drip ok "hello"` to see your first card.
+
+      When a coding agent needs you, a card comes from the notch.
+      For Claude Code, Codex or Gemini CLI, add the permission-cards recipe:
+        https://github.com/jrnxf/drip/blob/main/recipes/permission-cards/README.md
     EOS
   end
 
