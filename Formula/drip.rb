@@ -1,8 +1,8 @@
 class Drip < Formula
   desc "Scriptable notifications from the Mac notch"
   homepage "https://github.com/jrnxf/drip"
-  url "https://github.com/jrnxf/drip/releases/download/v0.1.0-pre.33/drip-0.1.0-pre.33-universal-apple-darwin.tar.gz"
-  sha256 "771fed409f45884560a37d8a936fad2efffa4a6d1397e000c4eeeff9f556f2af"
+  url "https://github.com/jrnxf/drip/releases/download/v0.1.0/drip-0.1.0-universal-apple-darwin.tar.gz"
+  sha256 "36c9593b26efeeb49dca6e9890cf204945c863527d870435df32fb3cd7a41844"
   license "MIT"
   head "https://github.com/jrnxf/drip.git", branch: "main"
 
