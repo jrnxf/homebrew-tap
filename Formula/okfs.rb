@@ -13,23 +13,23 @@ class Okfs < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/jrnxf/okfs/releases/download/v0.1.0-pre.26/okfs-0.1.0-pre.26-aarch64-apple-darwin.tar.gz"
-      sha256 "ddbf5c526605bcfaa200bb244eac038917d7e1218d2d2424911514121f79714a"
+      url "https://github.com/jrnxf/okfs/releases/download/v0.1.0-pre.27/okfs-0.1.0-pre.27-aarch64-apple-darwin.tar.gz"
+      sha256 "18ccc2ae8fdfee112fe1938087ac8355773b90d452d1bf2352e964ba45dfb0cc"
     end
     on_intel do
-      url "https://github.com/jrnxf/okfs/releases/download/v0.1.0-pre.26/okfs-0.1.0-pre.26-x86_64-apple-darwin.tar.gz"
-      sha256 "13abf34d17ca4550784f43a7f5d9a4057ad7cd1949c1c567e4e7bd4c3482bfc6"
+      url "https://github.com/jrnxf/okfs/releases/download/v0.1.0-pre.27/okfs-0.1.0-pre.27-x86_64-apple-darwin.tar.gz"
+      sha256 "8a3e202d0945b23c5a492b8af9315c7904a92f4d0e2d9bde6d17e17b7926719b"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/jrnxf/okfs/releases/download/v0.1.0-pre.26/okfs-0.1.0-pre.26-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "57012638d07a1eebb0cfe3dd505a5d96b7820f09f7a9d403d33c5e1f8aa0c0cc"
+      url "https://github.com/jrnxf/okfs/releases/download/v0.1.0-pre.27/okfs-0.1.0-pre.27-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "fb0c06a3f6de12cd10e86dcb63cf337b687a86d02fd0631f53a25a0cb80249aa"
     end
     on_intel do
-      url "https://github.com/jrnxf/okfs/releases/download/v0.1.0-pre.26/okfs-0.1.0-pre.26-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "3513eac717783129f81b9eafadaa3b5c7e8e1f29c759b00d5696882b889cbecd"
+      url "https://github.com/jrnxf/okfs/releases/download/v0.1.0-pre.27/okfs-0.1.0-pre.27-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "94f92f2e779de9505ac2a496f0184fed50646ed46e6ecce876009eae57689ed0"
     end
   end
 
